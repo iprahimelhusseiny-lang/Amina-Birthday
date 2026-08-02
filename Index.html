@@ -465,7 +465,6 @@
             align-items: center;
         }
 
-        /* Increased dimensions significantly to fit text naturally */
         .envelope-wrapper {
             position: relative;
             width: 100%;
@@ -507,7 +506,7 @@
             width: 100%;
             height: 100%;
             background-color: #eae5d6;
-            clip-path: polygon(0 0, 100% 0, 50% 48%); /* slightly adjusted flap to match taller height */
+            clip-path: polygon(0 0, 100% 0, 50% 48%); 
             transform-origin: top;
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 20;
@@ -516,7 +515,7 @@
 
         .envelope-seal {
             position: absolute;
-            top: 48%; /* matched to new flap tip */
+            top: 48%; 
             left: 50%;
             transform: translate(-50%, -50%);
             width: 60px;
@@ -547,7 +546,6 @@
             pointer-events: none;
         }
 
-        /* Adjusted letter to accommodate text efficiently */
         .letter-content {
             position: absolute;
             bottom: 10px;
@@ -564,7 +562,6 @@
             flex-direction: column;
             justify-content: flex-start;
             
-            /* Notebook style adjusted to perfectly match the adjusted line-height */
             background-image: linear-gradient(transparent 25px, #ccc 25px, #ccc 26px, transparent 26px);
             background-size: 100% 26px;
             background-position: 0 26px;
@@ -583,17 +580,17 @@
 
         .letter-content h3 {
             font-family: var(--font-display);
-            font-size: 1.8rem; /* slightly tweaked */
+            font-size: 1.8rem; 
             color: var(--pink-vibrant);
             margin-bottom: 5px;
-            margin-left: 15px; /* offset for the notebook margin */
+            margin-left: 15px; 
             z-index: 2;
         }
 
         .letter-content p {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 0.95rem; /* sized carefully to fit words dynamically */
-            line-height: 26px; /* perfectly matching notebook line gap */
+            font-size: 0.95rem; 
+            line-height: 26px; 
             margin-left: 15px; 
             color: var(--text-dark);
             z-index: 2;
@@ -610,7 +607,6 @@
             z-index: 7;
         }
 
-        /* Increased pull-out distance because the letters are now physically taller */
         .envelope-wrapper.is-open .letter-1 {
             transform: translateY(-140px) rotate(-5deg);
             z-index: 30;
@@ -674,7 +670,8 @@
 
         .polaroid img {
             width: 100%;
-            height: 140px;
+            /* Implementing 3:4 Aspect Ratio directly */
+            aspect-ratio: 3 / 4; 
             object-fit: cover;
             background-color: #eee;
         }
@@ -847,7 +844,6 @@
             .cluster-tl { width: 150px; height: 180px; top: -10px; left: -10px; }
             .cluster-br { width: 180px; height: 210px; bottom: -20px; right: -10px; }
             
-            /* Crucial mobile adjustments to keep letters fitting dynamically */
             .envelope-wrapper { width: 92%; height: 380px; } 
             .letter-content {
                 background-image: linear-gradient(transparent 23px, #ccc 23px, #ccc 24px, transparent 24px);
